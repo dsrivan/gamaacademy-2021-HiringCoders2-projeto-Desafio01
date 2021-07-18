@@ -97,7 +97,8 @@
               background-color: $darkGlasses;
               text-transform: uppercase;
               text-align: center;
-              min-height: $base * 12;
+              padding: ($base * 2) 0;
+              min-height: $base * 13;
               display: flex;
               flex-direction: column;
               justify-content: space-around;
@@ -141,6 +142,7 @@
               & .field {
                 display: block;
                 margin-bottom: $base * 2;
+                position: relative;
 
                 & label {
                   &:not(:last-child) {
@@ -157,6 +159,7 @@
 
                 & input {
                   padding: ($base * 2.5) ($base * 2);
+                  padding-left: $base * 7;
                   font-size: $base * 2;
                   border-radius: $base/2;
                   outline: none;
@@ -167,12 +170,17 @@
                   margin-top: $base * 4;
                   margin-bottom: $base * 4;
                 }
+
+                & span {
+                  position: absolute;
+                  top: $base * 2;
+                  left: $base * 2;
+                  color: $darkBgHeader;
+                }
               }
             }
 
             & .button {
-              margin-bottom: $base * 2;
-
               & button {
                 width: 100%;
                 padding: ($base * 3) ($base * 2);
@@ -183,6 +191,12 @@
                 font-size: $base * 4;
                 font-weight: bold;
                 cursor: pointer;
+
+                & span {
+                  transform: rotateY(180deg);
+                  font-size: inherit;
+                  margin-left: $base/2;
+                }
               }
             }
           }
