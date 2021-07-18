@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapper header {
+  height: 100px;
+  background-color: #0c0c0d;
+  color: #b1b1b1;
+}
+.wrapper header section {
+  max-width: 1140px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.wrapper header section h1 {
+  font-size: 35px;
+  position: relative;
+}
+.wrapper header section h1::first-letter, .wrapper header section h1::after {
+  color: #660809;
+}
+.wrapper header section h1::after {
+  content: ".";
+  position: absolute;
+  right: -10px;
+  bottom: -2px;
+}
+.wrapper main {
+  background-color: #121214;
+  color: #b1b1b1;
+  flex: 1;
+}
+.wrapper main section {
+  max-width: 1140px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.wrapper main section .left, .wrapper main section .right {
+  width: 50%;
+  min-height: calc(100vh - 100px - 50px);
+  padding: 16px;
+}
+@media only screen and (max-width: 800px) {
+  .wrapper main section .left, .wrapper main section .right {
+    width: 100%;
+    min-height: calc((100vh - 100px - 50px) / 2);
+  }
+}
+.wrapper footer {
+  background-color: #121214;
+  color: #121214;
+  height: 50px;
+}
+.wrapper footer section {
+  max-width: 1140px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}

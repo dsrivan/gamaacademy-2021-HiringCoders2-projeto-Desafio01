@@ -1,0 +1,90 @@
+@import "variaveis";
+@import "reset";
+@import "propriedades";
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & header {
+    height: 100px;
+    background-color: $darkBgHeader;
+    color: $darkTextColor;
+
+    & section {
+      max-width: 1140px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      padding-left: $base * 2;
+      padding-right: $base * 2;
+
+      & h1 {
+        font-size: $fontSize * 2.5;
+        position: relative;
+
+        &::first-letter,
+        &::after {
+          color: $darkBgButton;
+        }
+
+        &::after {
+          content: ".";
+          position: absolute;
+          right: -10px;
+          bottom: -2px;
+        }
+      }
+    }
+  }
+
+  & main {
+    background-color: $darkBgBody;
+    color: $darkTextColor;
+    flex: 1;
+
+    & section {
+      max-width: 1140px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: $base * 2;
+      padding-right: $base * 2;
+
+      & .left,
+      & .right {
+        width: 50%;
+        min-height: calc(100vh - 100px - 50px);
+        padding: $base * 2;
+
+        @media only screen and (max-width: 800px) {
+          width: 100%;
+          min-height: calc((100vh - 100px - 50px) / 2);
+        }
+      }
+    }
+  }
+
+  & footer {
+    background-color: $darkBgBody;
+    // color: $darkTextColor;
+    color: $darkBgBody;
+    height: 50px;
+
+    & section {
+      max-width: 1140px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: $base * 2;
+      padding-right: $base * 2;
+    }
+  }
+}

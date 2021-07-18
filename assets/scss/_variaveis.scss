@@ -1,0 +1,72 @@
+// Fontes
+$primaryFontFamily: "";
+$secondaryFontFamily: "";
+
+// base para medidas
+$base: 8px;
+
+// tamanho fonte
+$fontSize: 14px;
+
+//
+//
+//
+// Dark Theme
+
+$darkIconImput: #000000; // cor ícones inputs
+
+$darkBgHeader: #0c0c0d; // bg header
+$darkBgBody: #121214; // bg body
+$darkBgFooter: #121214; // bg footer
+
+$darkGlasses: #202024; // bg glasses
+
+$darkBgButton: #660809; // 'e' e '.' no header e o fundo do botão
+$darkDiscountOff: #bd0e0d; // 'OFF' do balão
+
+$darkTextColor: #b1b1b1; // cor textos e placeholder
+
+$darkLinearGradient: linear-gradient(170deg, #121214, #1f1f23);
+
+//
+//
+//
+// Light Theme
+
+$lightIconImput: #000000; // cor ícones inputs
+$lightBgHeader: #0c0c0d; // bg header
+$lightBgBody: #121214; // bg body
+$lightBgFooter: #121214; // bg footer
+$lightGlasses: #202024; // bg glasses
+
+$lightBgButton: #660809; // 'e' e '.' no header e o fundo do botão
+$lightDiscountOff: #bd0e0d; // 'OFF' do balão
+
+$lightTextColor: #b1b1b1; // cor textos e placeholder
+
+$lightLinearGradient: linear-gradient(170deg, #121214, #1f1f23);
+
+//
+//
+//
+//
+//
+// definição do tema
+
+// cores de background
+$bgHeader: $darkBgHeader;
+$bgBody: $darkBgBody;
+$bgFooter: $darkBgFooter;
+
+// cores de fonte
+$primaryTextColor: $darkTextColor;
+$secondaryTextColor: $darkBgButton;
+
+// cor do botão 'Me avise!'
+$buttonBgColor: $darkBgButton;
+
+// cores glass
+$bgGlass: $darkGlasses;
+
+// linear-gradient da imagem
+$linearGradient: $darkLinearGradient;
