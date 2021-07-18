@@ -62,9 +62,130 @@
         min-height: calc(100vh - 100px - 50px);
         padding: $base * 2;
 
-        @media only screen and (max-width: 800px) {
+        @media only screen and (max-width: 899px) {
           width: 100%;
           min-height: calc((100vh - 100px - 50px) / 2);
+        }
+      }
+
+      //   & .left {}
+      & .right {
+        & .right--text-counters {
+          //   border: 1px dashed lightgray;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          margin-bottom: $base * 2;
+          & .text {
+            font-size: $fontSize * 1.5;
+            padding: $base * 2;
+            padding-bottom: 0;
+          }
+
+          & .counters {
+            padding: $base * 2;
+            display: flex;
+            justify-content: space-between;
+            gap: $base * 1.5;
+
+            & .days,
+            & .hours,
+            & .minutes,
+            & .seconds {
+              flex: 1;
+              border-radius: $base/2;
+              background-color: $darkGlasses;
+              text-transform: uppercase;
+              text-align: center;
+              min-height: $base * 12;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+
+              & span {
+                font-size: $fontSize * 2.5;
+                font-weight: 700;
+
+                &:last-child {
+                  font-size: $fontSize * 0.8;
+                  font-weight: 500;
+                }
+              }
+            }
+          }
+        }
+        & .right--form {
+          //   border: 1px dashed lightgray;
+          padding: $base * 2;
+
+          & .form--title-fields-button {
+            padding: ($base * 5) ($base * 3);
+            background-color: $darkGlasses;
+            min-height: 250px;
+            border-radius: $base;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            & .title {
+              & h3 {
+                font-size: $fontSize * 1.2;
+                margin-bottom: $base * 3;
+              }
+            }
+
+            & .fields {
+              display: block;
+              //   margin-bottom: $base * 4;
+
+              & .field {
+                display: block;
+                margin-bottom: $base * 2;
+
+                & label {
+                  &:not(:last-child) {
+                    display: none;
+                  }
+                  margin-bottom: $base / 2;
+                  cursor: pointer;
+                }
+
+                & input[type="text"],
+                & input[type="email"] {
+                  width: 100%;
+                }
+
+                & input {
+                  padding: ($base * 2.5) ($base * 2);
+                  font-size: $base * 2;
+                  border-radius: $base/2;
+                  outline: none;
+                  border: 1px transparent;
+                }
+
+                &:last-child {
+                  margin-top: $base * 4;
+                  margin-bottom: $base * 4;
+                }
+              }
+            }
+
+            & .button {
+              margin-bottom: $base * 2;
+
+              & button {
+                width: 100%;
+                padding: ($base * 3) ($base * 2);
+                background-color: $darkBgButton;
+                border: 1px solid $darkBgButton;
+                border-radius: $base;
+                color: $darkTextColor;
+                font-size: $base * 4;
+                font-weight: bold;
+                cursor: pointer;
+              }
+            }
+          }
         }
       }
     }
