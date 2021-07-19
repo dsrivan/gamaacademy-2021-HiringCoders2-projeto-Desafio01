@@ -44,7 +44,6 @@ function fnValidateForm() {
     nomeCompleto.value = "";
     email.value = "";
 
-    nomeCompleto.focus();
     return true;
 };
 
