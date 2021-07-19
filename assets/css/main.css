@@ -71,6 +71,7 @@
   align-items: center;
   justify-content: center;
   z-index: 1;
+  pointer-events: none;
 }
 .wrapper main section .left .left--discount-image {
   position: relative;
@@ -131,6 +132,11 @@
 .wrapper main section .right {
   z-index: 2;
 }
+@media only screen and (max-width: 899px) {
+  .wrapper main section .right {
+    padding: 0;
+  }
+}
 .wrapper main section .right .right--text-counters {
   display: flex;
   flex-direction: column;
@@ -142,11 +148,21 @@
   padding: 16px;
   padding-bottom: 0;
 }
+@media only screen and (max-width: 899px) {
+  .wrapper main section .right .right--text-counters .text {
+    padding: 16px 0;
+  }
+}
 .wrapper main section .right .right--text-counters .counters {
   padding: 16px;
   display: flex;
   justify-content: space-between;
   gap: 12px;
+}
+@media only screen and (max-width: 899px) {
+  .wrapper main section .right .right--text-counters .counters {
+    padding: 16px 0;
+  }
 }
 .wrapper main section .right .right--text-counters .counters .days, .wrapper main section .right .right--text-counters .counters .hours, .wrapper main section .right .right--text-counters .counters .minutes, .wrapper main section .right .right--text-counters .counters .seconds {
   flex: 1;
@@ -170,6 +186,11 @@
 }
 .wrapper main section .right .right--form {
   padding: 16px;
+}
+@media only screen and (max-width: 899px) {
+  .wrapper main section .right .right--form {
+    padding: 16px 0;
+  }
 }
 .wrapper main section .right .right--form .form--title-fields-button {
   padding: 40px 24px;

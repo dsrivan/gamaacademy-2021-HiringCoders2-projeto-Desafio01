@@ -73,7 +73,7 @@
         align-items: center;
         justify-content: center;
         z-index: 1;
-        // pointer-events: none;
+        pointer-events: none;
 
         & .left--discount-image {
           position: relative;
@@ -137,6 +137,11 @@
       }
       & .right {
         z-index: 2;
+
+        @media only screen and (max-width: 899px) {
+          padding: 0;
+        }
+
         & .right--text-counters {
           display: flex;
           flex-direction: column;
@@ -146,6 +151,10 @@
             font-size: $fontSize * 1.5;
             padding: $base * 2;
             padding-bottom: 0;
+
+            @media only screen and (max-width: 899px) {
+              padding: ($base * 2) 0;
+            }
           }
 
           & .counters {
@@ -153,6 +162,10 @@
             display: flex;
             justify-content: space-between;
             gap: $base * 1.5;
+
+            @media only screen and (max-width: 899px) {
+              padding: ($base * 2) 0;
+            }
 
             & .days,
             & .hours,
@@ -183,6 +196,10 @@
         }
         & .right--form {
           padding: $base * 2;
+
+          @media only screen and (max-width: 899px) {
+            padding: ($base * 2) 0;
+          }
 
           & .form--title-fields-button {
             padding: ($base * 5) ($base * 3);
