@@ -68,10 +68,76 @@
         }
       }
 
-      //   & .left {}
+      & .left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        // pointer-events: none;
+
+        & .left--discount-image {
+          position: relative;
+
+          & .discount {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            width: $base * 15;
+            height: $base * 15;
+            border-radius: 50%;
+            background-color: $darkGlasses;
+            color: $darkTextColor;
+            position: absolute;
+            right: 0;
+            top: -($base);
+            text-transform: uppercase;
+            z-index: 3;
+
+            @media only screen and (max-width: 539px) {
+              width: $base * 10;
+              height: $base * 10;
+              top: -($base * 0.5);
+            }
+
+            & span {
+              font-size: 0.8rem;
+              &:nth-child(2) {
+                font-size: $base * 3;
+                font-weight: 700;
+              }
+              &:last-child {
+                color: $darkDiscountOff;
+              }
+            }
+          }
+
+          & .image {
+            position: relative;
+            &::after {
+              position: absolute;
+              content: "";
+              top: $base * 7;
+              right: 0;
+              bottom: -($base * 4);
+              left: 0;
+              z-index: 1;
+              border-radius: 50%;
+              background: linear-gradient(160deg, $darkGlasses, $darkBgBody);
+            }
+
+            & img {
+              width: 100%;
+              height: auto;
+              z-index: 2;
+              position: relative;
+            }
+          }
+        }
+      }
       & .right {
+        z-index: 2;
         & .right--text-counters {
-          //   border: 1px dashed lightgray;
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
@@ -116,7 +182,6 @@
           }
         }
         & .right--form {
-          //   border: 1px dashed lightgray;
           padding: $base * 2;
 
           & .form--title-fields-button {
@@ -137,7 +202,6 @@
 
             & .fields {
               display: block;
-              //   margin-bottom: $base * 4;
 
               & .field {
                 display: block;
@@ -207,7 +271,6 @@
 
   & footer {
     background-color: $darkBgBody;
-    // color: $darkTextColor;
     color: $darkBgBody;
     height: 50px;
 
