@@ -23,7 +23,7 @@ function fnValidateForm() {
     }
 
     fnRemoveClass(email, 'is-invalid');
-    if (email.value === "") {
+    if (email.value === "" || !(fnTestEmailFormat(email.value))) {
         fnAddClass(email, 'is-invalid');
         email.focus();
         return false
@@ -32,7 +32,7 @@ function fnValidateForm() {
     fnRemoveClass(divSuccess, 'd-none');
     setTimeout(() => {
         fnAddClass(divSuccess, 'd-none');
-    }, 2000);
+    }, 2500);
 
     data = JSON.stringify({
         name: nomeCompleto.value,
@@ -53,4 +53,9 @@ function fnAddClass(elem, className) {
 
 function fnRemoveClass(elem, className) {
     elem.classList.remove(className);
+}
+
+function fnTestEmailFormat(email) {
+    // poderia utilizar regex, mas vai apenas essa validação simples
+    return email.indexOf("@") != -1;
 }
