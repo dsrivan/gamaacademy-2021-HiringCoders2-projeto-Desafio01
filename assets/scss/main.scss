@@ -82,10 +82,14 @@
         align-items: center;
         justify-content: center;
         z-index: 1;
-        pointer-events: none;
 
         & .left--discount-image {
           position: relative;
+          transition: transform 0.3s ease-in-out;
+
+          &:hover {
+            transform: rotate(-5deg) scale(1.1);
+          }
 
           & .discount {
             display: flex;
@@ -171,6 +175,11 @@
             display: flex;
             justify-content: space-between;
             gap: $base * 1.5;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+              transform: translateY(-$base);
+            }
 
             @media only screen and (max-width: 899px) {
               padding: ($base * 2) 0;
@@ -205,6 +214,11 @@
         }
         & .right--form {
           padding: $base * 2;
+          transition: transform 0.3s ease-in-out;
+
+          &:hover {
+            transform: translateY(-$base);
+          }
 
           @media only screen and (max-width: 899px) {
             padding: ($base * 2) 0;
@@ -282,6 +296,11 @@
                 font-size: $base * 4;
                 font-weight: bold;
                 cursor: pointer;
+                transition: transform 0.3s ease-in-out;
+
+                &:hover {
+                  filter: saturate(0.8);
+                }
 
                 & span {
                   transform: rotateY(180deg);

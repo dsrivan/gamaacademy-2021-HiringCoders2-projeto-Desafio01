@@ -80,10 +80,13 @@
   align-items: center;
   justify-content: center;
   z-index: 1;
-  pointer-events: none;
 }
 .wrapper main section .left .left--discount-image {
   position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+.wrapper main section .left .left--discount-image:hover {
+  transform: rotate(-5deg) scale(1.1);
 }
 .wrapper main section .left .left--discount-image .discount {
   display: flex;
@@ -167,6 +170,10 @@
   display: flex;
   justify-content: space-between;
   gap: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+.wrapper main section .right .right--text-counters .counters:hover {
+  transform: translateY(-8px);
 }
 @media only screen and (max-width: 899px) {
   .wrapper main section .right .right--text-counters .counters {
@@ -195,6 +202,10 @@
 }
 .wrapper main section .right .right--form {
   padding: 16px;
+  transition: transform 0.3s ease-in-out;
+}
+.wrapper main section .right .right--form:hover {
+  transform: translateY(-8px);
 }
 @media only screen and (max-width: 899px) {
   .wrapper main section .right .right--form {
@@ -261,6 +272,10 @@
   font-size: 32px;
   font-weight: bold;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.wrapper main section .right .right--form .form--title-fields-button .button button:hover {
+  filter: saturate(0.8);
 }
 .wrapper main section .right .right--form .form--title-fields-button .button button span {
   transform: rotateY(180deg);
