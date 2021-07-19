@@ -2,6 +2,11 @@
 @import "reset";
 @import "propriedades";
 
+.is-invalid {
+  outline: 2px solid red !important;
+  color: red !important;
+}
+
 .wrapper {
   width: 100%;
   min-height: 100vh;
