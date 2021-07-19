@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+.d-none {
+  display: none !important;
+}
+
 .is-invalid {
   outline: 2px solid red !important;
   color: red !important;
@@ -205,6 +209,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 .wrapper main section .right .right--form .form--title-fields-button .title h3 {
   font-size: 19.2px;
@@ -261,6 +266,27 @@
   transform: rotateY(180deg);
   font-size: inherit;
   margin-left: 4px;
+}
+.wrapper main section .right .right--form .form--title-fields-button .success {
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #28a642;
+}
+.wrapper main section .right .right--form .form--title-fields-button .success .material-icons {
+  font-size: 80px;
+}
+.wrapper main section .right .right--form .form--title-fields-button .success span {
+  font-size: 24px;
+  margin-top: 24px;
 }
 .wrapper footer {
   background-color: #121214;

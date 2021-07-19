@@ -1,6 +1,8 @@
 const button = document.querySelector('.button button');
 button.addEventListener('click', fnPreSubmit);
 
+const divSuccess = document.querySelector('.success');
+
 function fnPreSubmit(e) {
     e.preventDefault();
     return fnValidateForm();
@@ -27,6 +29,11 @@ function fnValidateForm() {
         return false
     }
 
+    fnRemoveClass(divSuccess, 'd-none');
+    setTimeout(() => {
+        fnAddClass(divSuccess, 'd-none');
+    }, 2000);
+
     data = JSON.stringify({
         name: nomeCompleto.value,
         email: email.value,
@@ -37,6 +44,7 @@ function fnValidateForm() {
     nomeCompleto.value = "";
     email.value = "";
 
+    nomeCompleto.focus();
     return true;
 };
 
