@@ -6,6 +6,7 @@ $secondaryFontFamily: "";
 
 // base para medidas
 $base: 8px;
+$miniBase: 4px;
 
 // tamanho fonte
 $fontSize: 16px;
@@ -29,10 +30,10 @@ $darkBgFooter: #121214; // bg footer
 
 $darkGlasses: #202024; // bg glasses
 
-$darkBgButton: #660809; // 'e' e '.' no header e o fundo do botão
+$darkBgButton: #a21924; // 'e' e '.' no header e o fundo do botão
 $darkDiscountOff: #bd0e0d; // 'OFF' do balão
 
-$darkTextColor: #b1b1b1; // cor textos e placeholder
+$darkTextColor: #dcdcdc; // cor textos e placeholder
 
 $darkLinearGradient: linear-gradient(170deg, #121214, #1f1f23);
 
