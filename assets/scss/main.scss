@@ -190,7 +190,7 @@
             & .minutes,
             & .seconds {
               flex: 1;
-              border-radius: $base/2;
+              border-radius: $miniBase;
               background-color: $darkGlasses;
               text-transform: uppercase;
               text-align: center;
@@ -253,7 +253,7 @@
                   &:not(:last-child) {
                     display: none;
                   }
-                  margin-bottom: $base / 2;
+                  margin-bottom: $miniBase;
                   cursor: pointer;
                 }
 
@@ -266,7 +266,7 @@
                   padding: ($base * 2.5) ($base * 2);
                   padding-left: $base * 7;
                   font-size: $base * 2;
-                  border-radius: $base/2;
+                  border-radius: $miniBase;
                   outline: none;
                   border: 1px transparent;
                 }
@@ -305,7 +305,7 @@
                 & span {
                   transform: rotateY(180deg);
                   font-size: inherit;
-                  margin-left: $base/2;
+                  margin-left: miniBase;
                 }
               }
             }
